@@ -5,3 +5,4 @@ install/
 .ccache/
 CMakeCache.txt
 CMakeFiles/
+imgui.ini
