@@ -1,0 +1,96 @@
+{
+    "version": 10,
+    "$schema": "https://cmake.org/cmake/help/latest/_downloads/3e2d73bff478d88a7de0de736ba5e361/schema.json",
+    "configurePresets": [
+        {
+            "name": "Honda-notests",
+            "displayName": "Honda RelWithDebInfo (no tests)",
+            "inherits": [
+                "relwithdebinfo-notests"
+            ],
+            "binaryDir": "${sourceDir}/build",
+            "cacheVariables": {
+                "SOURCE_DESTINATION": "${sourceDir}/../src",
+                "BUILD_DESTINATION": "${sourceDir}/../build",
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/../install",
+                "BUILD_TESTING": "OFF",
+                "WITH_G1": "ON",
+                "WITH_Revo2": "ON",
+                "WITH_Honda": "ON",
+                "WITH_ROS_SUPPORT": "ON",
+                "PYTHON_BINDING": "ON"
+            }
+        },
+        {
+            "name": "Honda-notests-minimal",
+            "displayName": "Honda RelWithDebInfo (no tests, no ros, no python)",
+            "inherits": [
+                "Honda-notests"
+            ],
+            "cacheVariables": {
+                "BUILD_TESTING": "OFF",
+                "WITH_ROS_SUPPORT": "OFF",
+                "PYTHON_BINDING": "OFF"
+            }
+        },
+        {
+            "name": "Honda-tests",
+            "displayName": "Honda RelWithDebInfo (with tests)",
+            "inherits": [
+                "Honda-notests"
+            ],
+            "cacheVariables": {
+                "BUILD_TESTING": "ON"
+            }
+        },
+        {
+            "name": "Honda-tests-minimal",
+            "displayName": "Honda RelWithDebInfo (with tests, no ros, no python)",
+            "inherits": [
+                "Honda-tests"
+            ],
+            "cacheVariables": {
+                "WITH_ROS_SUPPORT": "ON",
+                "PYTHON_BINDING": "OFF"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "Honda-notests",
+            "displayName": "Honda RelWithDebInfo (no tests)",
+            "configurePreset": "Honda-notests",
+            "configuration": "RelWithDebInfo",
+            "targets": [
+                "install"
+            ]
+        },
+        {
+            "name": "Honda-notests-minimal",
+            "displayName": "Honda RelWithDebInfo (no tests, no ros, no python)",
+            "configurePreset": "Honda-notests-minimal",
+            "configuration": "RelWithDebInfo",
+            "targets": [
+                "install"
+            ]
+        },
+        {
+            "name": "Honda-tests",
+            "displayName": "Honda RelWithDebInfo (with tests)",
+            "configurePreset": "Honda-tests",
+            "configuration": "RelWithDebInfo",
+            "targets": [
+                "install"
+            ]
+        },
+        {
+            "name": "Honda-tests-minimal",
+            "displayName": "Honda RelWithDebInfo (with tests, no ros, no python)",
+            "configurePreset": "Honda-tests-minimal",
+            "configuration": "RelWithDebInfo",
+            "targets": [
+                "install"
+            ]
+        }
+    ]
+}    
