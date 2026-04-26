@@ -52,7 +52,7 @@
                 "WITH_ROS_SUPPORT": "ON",
                 "PYTHON_BINDING": "OFF"
             }
-        }
+        },
         {
             "name": "Honda-notests",
             "displayName": "Honda RelWithDebInfo (no tests)",
@@ -142,7 +142,7 @@
             "targets": [
                 "install"
             ]
-        }
+        },
         {
             "name": "Honda-notests",
             "displayName": "Honda RelWithDebInfo (no tests)",
