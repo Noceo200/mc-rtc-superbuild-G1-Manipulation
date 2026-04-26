@@ -22,14 +22,14 @@ endif()
 
 AddCatkinProject(
   honda_description
-  GITHUB Noceo200/honda_description
+  GIT_REPOSITORY git@github.com:Noceo200/honda_description.git
   GIT_TAG origin/main
   WORKSPACE data_ws
 )
 
 AddProject(
   mc_honda
-  GITHUB Noceo200/mc_honda
+  GIT_REPOSITORY git@github.com:Noceo200/mc_honda.git
   GIT_TAG origin/main
   DEPENDS honda_description mc_rtc
 )
