@@ -19,3 +19,13 @@ if(WITH_Revo2)
     DEPENDS mc_mujoco
   )
 endif()
+
+if(WITH_Homda)
+  AddProject(
+    honda_mj_description
+    GIT_REPOSITORY git@github.com:Noceo200/honda_mj_description.git
+    GIT_TAG origin/main
+    DEPENDS mc_mujoco
+  )
+endif()
+
