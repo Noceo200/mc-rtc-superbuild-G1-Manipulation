@@ -20,7 +20,7 @@ if(WITH_Revo2)
   )
 endif()
 
-if(WITH_Homda)
+if(WITH_Honda)
   AddProject(
     honda_mj_description
     GIT_REPOSITORY git@github.com:Noceo200/honda_mj_description.git
