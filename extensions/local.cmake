@@ -2,6 +2,12 @@ set(EXTENSIONS_DIR ${CMAKE_CURRENT_LIST_DIR}/superbuild-extensions)
 include(${EXTENSIONS_DIR}/gui/mc_rtc-magnum.cmake)
 include(${EXTENSIONS_DIR}/interfaces/mc_mujoco.cmake)
 
+AddProject(
+    mc_manipulation_objects
+    GIT_REPOSITORY git@github.com:Noceo200/mc_manipulation_objects.git
+    GIT_TAG origin/main
+  )
+  
 if(WITH_G1)
   AddProject(
     g1_mj_description
