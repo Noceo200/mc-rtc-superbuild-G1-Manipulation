@@ -29,7 +29,7 @@ endif()
 if(WITH_Honda)
   AddProject(
     honda_mj_description
-    GIT_REPOSITORY git@gite.lirmm.fr:onoel/honda_mj_description.git
+    GITE onoel/honda_mj_description
     GIT_TAG origin/main
     DEPENDS mc_mujoco
   )
