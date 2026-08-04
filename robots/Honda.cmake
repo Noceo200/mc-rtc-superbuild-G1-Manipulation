@@ -8,7 +8,7 @@ if(ROS_IS_ROS2)
     AddCatkinProject(
       ur_description
       GITHUB UniversalRobots/Universal_Robots_ROS2_Description
-      GIT_TAG origin/humble
+      GIT_TAG origin/${ROS_DISTRO}
       WORKSPACE data_ws
     )
   else() # ROS1
@@ -22,14 +22,14 @@ endif()
 
 AddCatkinProject(
   honda_description
-  GIT_REPOSITORY git@github.com:Noceo200/honda_description.git
+  GITE onoel/honda_description
   GIT_TAG origin/main
   WORKSPACE data_ws
 )
 
 AddProject(
   mc_honda
-  GIT_REPOSITORY git@github.com:Noceo200/mc_honda.git
+  GITE onoel/mc_honda
   GIT_TAG origin/main
   DEPENDS honda_description mc_rtc
 )
