@@ -4,7 +4,7 @@ include(${EXTENSIONS_DIR}/interfaces/mc_mujoco.cmake)
 
 AddProject(
     mc_manipulation_objects
-    GIT_REPOSITORY git@github.com:Noceo200/mc_manipulation_objects.git
+    GITHUB Noceo200/mc_manipulation_objects
     GIT_TAG origin/main
   )
   
