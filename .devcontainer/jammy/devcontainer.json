@@ -20,11 +20,16 @@
     "--cap-add=sys_nice", // Grants the container the CAP_SYS_NICE capability, which allows the container to raise process nice values, set real-time scheduling policies, set CPU affinity, and other operations.
     "--security-opt", // allow core dumps
     "seccomp=unconfined", // allow core dumps
-    // Uncomment for containers requiring use of nvidia GPUs
-    // You will need to install NVIDIA Container Toolkit first
-    // "--runtime=nvidia",
-    // "--gpus=all",
+
+    // enable gpu access for all gpus on all systems
+    // gpu rendering when its available, software rendering otherwise
+    "--privileged"
   ],
+
+  // use the GPU when the host can provide one, start anyway otherwise
+  "hostRequirements": {
+    "gpu": "optional"
+  },
 
   "containerEnv": {
     "DISPLAY": "${localEnv:DISPLAY}"
@@ -36,7 +41,7 @@
 
   "features":
   {
-    "ghcr.io/devcontainers/features/node:1": {},
+    "ghcr.io/devcontainers/features/node:2.1.0": {},
     "ghcr.io/arntanguy/nvim-devcontainer-feature/nvim:latest": {},
     "ghcr.io/devcontainers/features/github-cli": { "version": "latest" },
     "ghcr.io/georgofenbeck/features/lazygit-linuxbinary:1": { "version": "latest" }

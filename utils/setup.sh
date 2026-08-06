@@ -154,11 +154,11 @@ log "[3/3] setting up mc_unitree..."
 configure_superbuild ON
 cmake --build --preset="${PRESET}"
 
-cat <<EOF
-------------------------------------------------------------
-Successfully installed all dependencies. Verify with:
-    ls ${INSTALL_DIR}/bin/ | grep MCControl
-Open a new shell (or 'source ${INSTALL_DIR}/setup_mc_rtc.sh')
-to get the environment.
-------------------------------------------------------------
-EOF
+# cat <<EOF
+# ------------------------------------------------------------
+# Successfully installed all dependencies. Verify with:
+#     ls ${INSTALL_DIR}/bin/ | grep MCControl
+# Open a new shell (or 'source ${INSTALL_DIR}/setup_mc_rtc.sh')
+# to get the environment.
+# ------------------------------------------------------------
+# EOF
