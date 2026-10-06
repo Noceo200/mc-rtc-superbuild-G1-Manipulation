@@ -9,7 +9,7 @@ AddProject(
   )
 
 AddProject(
-    mc_isaac
+    mc_nn
     GITHUB isri-aist/mc_nn
     GIT_TAG origin/main
   )
