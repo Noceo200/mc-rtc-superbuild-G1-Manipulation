@@ -29,7 +29,7 @@ if(WITH_G1)
   )
 
   AddProject(
-    g1_mj_description
+    g1_isaac_description
     GITHUB isri-aist/g1_isaac_description
     GIT_TAG origin/main
     DEPENDS mc_isaac
@@ -51,7 +51,7 @@ if(WITH_Revo2)
     DEPENDS mc_mujoco
   )
   AddProject(
-    revo2_mj_description
+    revo2_isaac_description
     GITHUB isri-aist/revo2_isaac_description
     GIT_TAG origin/main
     DEPENDS mc_isaac
@@ -66,7 +66,7 @@ if(WITH_Honda)
     DEPENDS mc_mujoco
   )
   AddProject(
-    honda_mj_description
+    honda_isaac_description
     GITE onoel/honda_isaac_description
     GIT_TAG origin/main
     DEPENDS mc_isaac
