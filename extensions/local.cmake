@@ -35,12 +35,12 @@ if(WITH_G1)
     DEPENDS mc_isaac
   )
   
-  AddProject(mc_unitree2
+  /*AddProject(mc_unitree2
     GITHUB y-hadj/mc_unitree2_wG1
     GIT_TAG master
     DEPENDS mc_rtc 
     CMAKE_ARGS -DGENERATE_G1_REVO2_CONTROLLER=ON -DCMAKE_POLICY_VERSION_MINIMUM=3.5
-  )
+  )*/
 endif()
 
 if(WITH_Revo2)
